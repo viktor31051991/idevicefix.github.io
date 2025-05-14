@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeviceFix - Профессиональный сервис по ремонту цифровой техники</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#0047AB',secondary:'#4682B4'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-section {
+            background-image: url('https://readdy.ai/api/search-image?query=Modern%20tech%20repair%20workshop%20with%20clean%20white%20workbenches%2C%20professional%20tools%2C%20organized%20components%2C%20bright%20lighting%2C%20blue%20accents%2C%20technicians%20working%20on%20devices%2C%20high-tech%20environment%2C%20minimalist%20design%2C%20spacious%20layout&width=1200&height=600&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-overlay {
+            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.4) 100%);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #0047AB;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center">
+                <span class="text-primary text-3xl font-['Pacifico']">DeviceFix</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#services" class="text-gray-700 hover:text-primary font-medium transition-colors">Услуги</a>
+                <a href="#advantages" class="text-gray-700 hover:text-primary font-medium transition-colors">Преимущества</a>
+                <a href="#reviews" class="text-gray-700 hover:text-primary font-medium transition-colors">Отзывы</a>
+                <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-colors">О компании</a>
+                <a href="#contacts" class="text-gray-700 hover:text-primary font-medium transition-colors">Контакты</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+79123497383" class="hidden md:flex items-center text-gray-700 hover:text-primary">
+                    <div class="w-10 h-10 flex items-center justify-center">
+                        <i class="ri-phone-line text-primary"></i>
+                    </div>
+                    <span class="font-medium">+7 (912) 349-73-83</span>
+                </a>
+             
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section w-full min-h-[600px] pt-24">
+        <div class="hero-overlay w-full min-h-[600px] flex items-center">
+            <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Профессиональный ремонт цифровой техники</h1>
+                    <p class="text-lg text-gray-700 mb-8">Быстрый и качественный ремонт смартфонов, ноутбуков, планшетов и компьютеров. Гарантия на все виды работ и запчасти.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Оставить заявку <div class="flex space-x-4">
+                              <a href="https://t.me/+79649518224" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                               <i class="ri-telegram-fill"></i>
+                               </a>
+                                <a href="#" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-vk-fill"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                                <a href="https://web.whatsapp.com/+79649518224" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-whatsapp-line"></i>
+                                </a>
+                                <a href="mailto:devicefix@icloud.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-mail-line"></i>
+                                </a>
+                            </div></button>
+                        <button class="border border-primary text-primary px-8 py-3 !rounded-button font-medium hover:bg-primary hover:text-white transition whitespace-nowrap">Вызвать мастера <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Телефон</h4>
+                                    <a href="tel:+79123497383" class="text-gray-600 hover:text-primary">+7 (912) 349-73-83</a>
+                                </div></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Наши услуги</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Мы предлагаем полный спектр услуг по ремонту и обслуживанию цифровой техники любой сложности</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Modern%20smartphone%20with%20cracked%20screen%20on%20repair%20workbench%20with%20professional%20tools%2C%20bright%20lighting%2C%20clean%20environment%2C%20blue%20technical%20background%2C%20high%20resolution%20detail&width=600&height=400&seq=2&orientation=landscape" alt="Ремонт смартфонов" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-smartphone-line text-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Ремонт смартфонов</h3>
+                        <p class="text-gray-600 mb-4">Замена экрана, аккумулятора, разъемов, восстановление после воды и другие виды ремонта iOS и Android устройств.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Подробнее
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Modern%20laptop%20being%20repaired%20on%20clean%20workbench%2C%20components%20neatly%20arranged%2C%20professional%20repair%20tools%2C%20bright%20lighting%2C%20blue%20technical%20background%2C%20high%20resolution%20detail&width=600&height=400&seq=3&orientation=landscape" alt="Ремонт ноутбуков" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-macbook-line text-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Ремонт ноутбуков</h3>
+                        <p class="text-gray-600 mb-4">Замена матрицы, клавиатуры, ремонт материнских плат, чистка от пыли, замена термопасты и комплектующих.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Подробнее
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Tablet%20computer%20disassembled%20on%20repair%20workbench%2C%20professional%20tools%2C%20components%20organized%20neatly%2C%20bright%20lighting%2C%20clean%20environment%2C%20blue%20technical%20background%2C%20high%20resolution%20detail&width=600&height=400&seq=4&orientation=landscape" alt="Ремонт планшетов" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-tablet-line text-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Ремонт планшетов</h3>
+                        <p class="text-gray-600 mb-4">Замена сенсорного стекла, дисплея, аккумулятора, разъемов зарядки и другие виды ремонта iPad и Android планшетов.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Подробнее
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Desktop%20computer%20motherboard%20being%20repaired%2C%20circuit%20diagnostics%2C%20professional%20tools%2C%20bright%20lighting%2C%20clean%20environment%2C%20blue%20technical%20background%2C%20high%20resolution%20detail&width=600&height=400&seq=5&orientation=landscape" alt="Ремонт компьютеров" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-computer-line text-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Ремонт компьютеров</h3>
+                        <p class="text-gray-600 mb-4">Диагностика и устранение неисправностей, апгрейд комплектующих, установка ПО, настройка и оптимизация системы.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Подробнее
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Data%20recovery%20process%20from%20damaged%20hard%20drive%2C%20professional%20equipment%2C%20circuit%20analysis%2C%20bright%20lighting%2C%20clean%20environment%2C%20blue%20technical%20background%2C%20high%20resolution%20detail&width=600&height=400&seq=6&orientation=landscape" alt="Восстановление данных" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-hard-drive-line text-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Восстановление данных</h3>
+                        <p class="text-gray-600 mb-4">Профессиональное восстановление информации с поврежденных накопителей, флеш-карт, SSD и HDD дисков.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Подробнее
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Corporate%20IT%20support%2C%20server%20rack%20maintenance%2C%20network%20equipment%20repair%2C%20professional%20technician%2C%20bright%20lighting%2C%20clean%20environment%2C%20blue%20technical%20background%2C%20high%20resolution%20detail&width=600&height=400&seq=7&orientation=landscape" alt="Корпоративное обслуживание" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-building-line text-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Корпоративное обслуживание</h3>
+                        <p class="text-gray-600 mb-4">Комплексное обслуживание офисной техники, серверного оборудования и IT-инфраструктуры для бизнеса.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Подробнее
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-r from-primary to-secondary rounded-lg shadow-lg overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/2 p-8 md:p-12 text-white">
+                        <h2 class="text-3xl font-bold mb-6">Оставьте заявку на ремонт</h2>
+                        <p class="text-white text-opacity-90 mb-8">Заполните форму, и наш специалист свяжется с вами в течение 15 минут для консультации и записи на ремонт.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 flex items-center justify-center mt-1 mr-3">
+                                    <i class="ri-check-line text-white"></i>
+                                </div>
+                                <span>Бесплатная диагностика при заказе ремонта</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 flex items-center justify-center mt-1 mr-3">
+                                    <i class="ri-check-line text-white"></i>
+                                </div>
+                                <span>Выезд мастера на дом или в офис</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 flex items-center justify-center mt-1 mr-3">
+                                    <i class="ri-check-line text-white"></i>
+                                </div>
+                                <span>Гарантия на все виды работ до 12 месяцев</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-1/2 bg-white p-8 md:p-12">
+                        <form>
+                            <div class="mb-4">
+                                <label for="device" class="block text-gray-700 font-medium mb-2">Тип устройства</label>
+                                <div class="relative">
+                                    <select id="device" class="w-full px-4 py-3 border border-gray-300 rounded bg-white text-gray-700 appearance-none pr-8">
+                                        <option value="" disabled selected>Выберите тип устройства</option>
+                                        <option value="smartphone">Смартфон</option>
+                                        <option value="laptop">Ноутбук</option>
+                                        <option value="tablet">Планшет</option>
+                                        <option value="pc">Компьютер</option>
+                                        <option value="other">Другое</option>
+                                    </select>
+                                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                        <i class="ri-arrow-down-s-line text-gray-500"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="problem" class="block text-gray-700 font-medium mb-2">Описание проблемы</label>
+                                <textarea id="problem" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded resize-none" placeholder="Опишите проблему с устройством"></textarea>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Ваше имя</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded" placeholder="Иван Петров">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-gray-700 font-medium mb-2">Телефон</label>
+                                    <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded" placeholder="+7 (___) ___-__-__">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="flex items-center">
+                                    <div class="relative w-5 h-5 mr-3">
+                                        <input type="checkbox" class="opacity-0 absolute w-5 h-5">
+                                        <div class="border border-gray-300 rounded w-5 h-5 flex items-center justify-center">
+                                            <div class="hidden w-3 h-3 bg-primary rounded-sm"></div>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-600">Я согласен на обработку персональных данных</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Почему выбирают нас</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Более 10 лет мы оказываем качественные услуги по ремонту цифровой техники</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Advantage 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="ri-shield-check-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Гарантия качества</h3>
+                    <p class="text-gray-600 text-center">Предоставляем гарантию до 12 месяцев на все виды работ и запчасти</p>
+                </div>
+                
+                <!-- Advantage 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="ri-time-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Быстрый ремонт</h3>
+                    <p class="text-gray-600 text-center">Большинство ремонтов выполняется в течение 1-2 часов при наличии запчастей</p>
+                </div>
+                
+                <!-- Advantage 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="ri-tools-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Профессионализм</h3>
+                    <p class="text-gray-600 text-center">Сертифицированные мастера с опытом работы более 5 лет</p>
+                </div>
+                
+                <!-- Advantage 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="ri-money-dollar-circle-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Честные цены</h3>
+                    <p class="text-gray-600 text-center">Прозрачное ценообразование без скрытых платежей и доплат</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Как мы работаем</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Простой и понятный процесс ремонта вашего устройства</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Progress Line -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-primary bg-opacity-20 transform -translate-x-1/2"></div>
+                
+                <div class="space-y-12 md:space-y-0">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Оставьте заявку</h3>
+                            <p class="text-gray-600">Заполните форму на сайте или позвоните нам по телефону</p>
+                        </div>
+                        <div class="relative z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold mb-6 md:mb-0">1</div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <img src="https://readdy.ai/api/search-image?query=Person%20filling%20out%20online%20repair%20request%20form%20on%20smartphone%2C%20clean%20modern%20interface%2C%20blue%20accents%2C%20minimalist%20design%2C%20high%20resolution%20detail&width=400&height=300&seq=8&orientation=landscape" alt="Заявка на ремонт" class="rounded-lg shadow-md w-full h-48 object-cover object-top">
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center">
+                        <div class="md:w-1/2 md:pl-12 md:text-left mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Бесплатная диагностика</h3>
+                            <p class="text-gray-600">Мастер проведет диагностику и определит причину неисправности</p>
+                        </div>
+                        <div class="relative z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold mb-6 md:mb-0">2</div>
+                        <div class="md:w-1/2 md:pr-12">
+                            <img src="https://readdy.ai/api/search-image?query=Technician%20diagnosing%20smartphone%20with%20professional%20equipment%2C%20circuit%20testing%2C%20bright%20lighting%2C%20clean%20environment%2C%20blue%20technical%20background%2C%20high%20resolution%20detail&width=400&height=300&seq=9&orientation=landscape" alt="Диагностика устройства" class="rounded-lg shadow-md w-full h-48 object-cover object-top">
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Согласование и ремонт</h3>
+                            <p class="text-gray-600">Согласуем с вами стоимость и сроки, после чего приступаем к ремонту</p>
+                        </div>
+                        <div class="relative z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold mb-6 md:mb-0">3</div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <img src="https://readdy.ai/api/search-image?query=Technician%20repairing%20laptop%20motherboard%20with%20soldering%20equipment%2C%20precision%20work%2C%20bright%20lighting%2C%20clean%20environment%2C%20blue%20technical%20background%2C%20high%20resolution%20detail&width=400&height=300&seq=10&orientation=landscape" alt="Процесс ремонта" class="rounded-lg shadow-md w-full h-48 object-cover object-top">
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center">
+                        <div class="md:w-1/2 md:pl-12 md:text-left mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Проверка и выдача</h3>
+                            <p class="text-gray-600">Тестируем устройство и выдаем вам с гарантией на ремонт</p>
+                        </div>
+                        <div class="relative z-10 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold mb-6 md:mb-0">4</div>
+                        <div class="md:w-1/2 md:pr-12">
+                            <img src="https://readdy.ai/api/search-image?query=Technician%20handing%20repaired%20smartphone%20to%20customer%2C%20warranty%20certificate%2C%20bright%20modern%20service%20center%2C%20clean%20environment%2C%20blue%20accents%2C%20high%20resolution%20detail&width=400&height=300&seq=11&orientation=landscape" alt="Выдача устройства" class="rounded-lg shadow-md w-full h-48 object-cover object-top">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Отзывы наших клиентов</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Более 10,000 довольных клиентов доверяют нам свои устройства</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600">5.0</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Отличный сервис! Разбил экран на iPhone 13 Pro, обратился в DeviceFix и через 2 часа получил телефон как новый. Цена адекватная, работа выполнена качественно."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-3-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900">Алексей Николаев</h4>
+                            <p class="text-sm text-gray-500">12 мая 2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600">5.0</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Ноутбук перестал включаться, в других сервисах сказали, что материнская плата под замену. В DeviceFix диагностировали проблему с чипом питания и отремонтировали за день. Сэкономили мне кучу денег!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-3-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900">Марина Соколова</h4>
+                            <p class="text-sm text-gray-500">28 апреля 2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600">4.5</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Обращались как компания для обслуживания офисной техники. Заключили договор на постоянное обслуживание. Работают оперативно, всегда на связи, решают любые проблемы. Рекомендую для корпоративных клиентов."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-3-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900">Дмитрий Волков</h4>
+                            <p class="text-sm text-gray-500">15 марта 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="text-primary font-medium hover:underline">Смотреть все отзывы</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="w-full lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">О компании DeviceFix</h2>
+                    <p class="text-gray-700 mb-4">Мы – команда профессионалов с более чем 10-летним опытом работы в сфере ремонта цифровой техники. Наша миссия – предоставлять качественный и доступный ремонт, возвращая к жизни ваши любимые устройства.</p>
+                    <p class="text-gray-700 mb-6">Сервисный центр DeviceFix оснащен современным оборудованием для диагностики и ремонта любой сложности. Мы используем только оригинальные или высококачественные совместимые запчасти, гарантируя долговечность ремонта.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center">
+                                <i class="ri-user-star-line text-2xl text-primary"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">10,000+</h4>
+                                <p class="text-gray-600">Довольных клиентов</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center">
+                                <i class="ri-tools-fill text-2xl text-primary"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">25,000+</h4>
+                                <p class="text-gray-600">Успешных ремонтов</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center">
+                                <i class="ri-medal-line text-2xl text-primary"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">15+</h4>
+                                <p class="text-gray-600">Сертифицированных мастеров</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center">
+                                <i class="ri-building-line text-2xl text-primary"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">5</h4>
+                                <p class="text-gray-600">Сервисных центров</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="inline-flex items-center text-primary font-medium">
+                        Подробнее о компании
+                        <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <img src="https://readdy.ai/api/search-image?query=Modern%20tech%20repair%20service%20center%20interior%2C%20clean%20organized%20workbenches%2C%20professional%20equipment%2C%20bright%20lighting%2C%20blue%20accents%2C%20technicians%20working%2C%20high-tech%20environment%2C%20minimalist%20design&width=600&height=500&seq=12&orientation=landscape" alt="О компании DeviceFix" class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Часто задаваемые вопросы</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Ответы на самые популярные вопросы о нашем сервисе</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6 bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 focus:outline-none">
+                        <span class="text-lg font-medium text-gray-900">Сколько времени занимает ремонт?</span>
+                        <i class="ri-arrow-down-s-line text-primary"></i>
+                    </button>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-700">Время ремонта зависит от сложности проблемы и наличия запчастей. Простые ремонты (замена экрана, батареи) обычно выполняются в течение 1-2 часов. Сложные ремонты (замена материнской платы, восстановление после воды) могут занять от 1 до 3 дней. Точные сроки мы сообщаем после диагностики.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-6 bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 focus:outline-none">
+                        <span class="text-lg font-medium text-gray-900">Какую гарантию вы предоставляете?</span>
+                        <i class="ri-arrow-down-s-line text-primary"></i>
+                    </button>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-700">Мы предоставляем гарантию на все виды ремонтных работ и запчасти. Стандартная гарантия составляет 6 месяцев, на некоторые виды работ – до 12 месяцев. Гарантия распространяется на установленные запчасти и выполненные работы. Подробные условия гарантии предоставляются при выдаче устройства.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-6 bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 focus:outline-none">
+                        <span class="text-lg font-medium text-gray-900">Можно ли отследить статус ремонта?</span>
+                        <i class="ri-arrow-down-s-line text-primary"></i>
+                    </button>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-700">Да, вы можете отслеживать статус ремонта вашего устройства. При оформлении заказа вы получаете уникальный номер, по которому можно проверить статус на нашем сайте или через мобильное приложение. Также мы отправляем SMS-уведомления о ключевых этапах ремонта.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-6 bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 focus:outline-none">
+                        <span class="text-lg font-medium text-gray-900">Какие запчасти вы используете?</span>
+                        <i class="ri-arrow-down-s-line text-primary"></i>
+                    </button>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-700">Мы используем оригинальные запчасти или высококачественные совместимые компоненты от проверенных поставщиков. При оформлении заказа вы можете выбрать тип запчастей: оригинальные (дороже, но с максимальным качеством) или совместимые (доступнее по цене, но также с гарантией). Все запчасти проходят тестирование перед установкой.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="mb-6 bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 focus:outline-none">
+                        <span class="text-lg font-medium text-gray-900">Что делать, если устройство не подлежит ремонту?</span>
+                        <i class="ri-arrow-down-s-line text-primary"></i>
+                    </button>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-700">Если после диагностики выясняется, что устройство не подлежит ремонту или ремонт экономически нецелесообразен, мы предложим вам несколько вариантов: выкуп устройства на запчасти, помощь в выборе нового устройства со скидкой или утилизацию с соблюдением экологических норм. В любом случае, мы поможем найти оптимальное решение.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-r from-primary to-secondary rounded-lg shadow-lg overflow-hidden">
+                <div class="p-8 md:p-12 text-center">
+                    <h2 class="text-3xl font-bold text-white mb-6">Нужен срочный ремонт?</h2>
+                    <p class="text-white text-opacity-90 text-lg mb-8 max-w-2xl mx-auto">Оставьте заявку прямо сейчас и получите скидку 10% на первый ремонт!</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <button class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Оставить заявку <div class="flex space-x-4">
+                              <a href="https://t.me/+79649518224" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                               <i class="ri-telegram-fill"></i>
+                               </a>
+                                <a href="#" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-vk-fill"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                                <a href="https://web.whatsapp.com/+79649518224" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-whatsapp-line"></i>
+                                </a>
+                                <a href="mailto:devicefix@icloud.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-mail-line"></i>
+                                </a>
+                            </div></button>
+                        <a href="tel:+79123497383" class="border border-white text-white px-8 py-3 !rounded-button font-medium hover:bg-white hover:text-primary transition flex items-center justify-center whitespace-nowrap">
+                            <i class="ri-phone-line mr-2"></i>
+                            Позвонить нам
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Контакты</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Свяжитесь с нами удобным для вас способом</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="w-full lg:w-1/3">
+                    <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Наши контакты</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center mt-1 mr-4 bg-primary bg-opacity-10 rounded-full">
+                                    <i class="ri-map-pin-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Адрес</h4>
+                                    <p class="text-gray-600">г. Оренбург, ул. Геннадия Донковцева, д. 15</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center mt-1 mr-4 bg-primary bg-opacity-10 rounded-full">
+                                    <i class="ri-time-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Режим работы</h4>
+                                    <p class="text-gray-600">Пн-Пт: 10:00 - 20:00</p>
+                                    <p class="text-gray-600">Сб-Вс: 10:00 - 18:00</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center mt-1 mr-4 bg-primary bg-opacity-10 rounded-full">
+                                    <i class="ri-phone-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Телефон</h4>
+                                    <a href="tel:+79123497383" class="text-gray-600 hover:text-primary">+7 (912) 349-73-83</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center mt-1 mr-4 bg-primary bg-opacity-10 rounded-full">
+                                    <i class="ri-mail-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-1">Email</h4>
+                                    <a href="mailto:devicefix@icloud.com" class="text-gray-600 hover:text-primary">devicefix@icloud.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium text-gray-900 mb-4">Мы в социальных сетях</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://t.me/+79649518224" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                               <i class="ri-telegram-fill"></i>
+                               </a>
+                                <a href="#" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-vk-fill"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                                <a href="https://web.whatsapp.com/+79649518224" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-whatsapp-line"></i>
+                                </a>
+                                <a href="mailto:devicefix@icloud.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-mail-line"></i>
+                                </a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full lg:w-2/3">
+                    <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Напишите нам</h3>
+                        
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="contact-name" class="block text-gray-700 font-medium mb-2">Ваше имя</label>
+                                    <input type="text" id="contact-name" class="w-full px-4 py-3 border border-gray-300 rounded" placeholder="Иван Петров">
+                                </div>
+                                <div>
+                                    <label for="contact-phone" class="block text-gray-700 font-medium mb-2">Телефон</label>
+                                    <input type="tel" id="contact-phone" class="w-full px-4 py-3 border border-gray-300 rounded" placeholder="+7 (___) ___-__-__">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="contact-email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="contact-email" class="w-full px-4 py-3 border border-gray-300 rounded" placeholder="example@mail.ru">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="contact-message" class="block text-gray-700 font-medium mb-2">Сообщение</label>
+                                <textarea id="contact-message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded resize-none" placeholder="Опишите ваш вопрос или проблему"></textarea>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="flex items-center">
+                                    <div class="relative w-5 h-5 mr-3">
+                                        <input type="checkbox" class="opacity-0 absolute w-5 h-5">
+                                        <div class="border border-gray-300 rounded w-5 h-5 flex items-center justify-center">
+                                            <div class="hidden w-3 h-3 bg-primary rounded-sm"></div>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-gray-600">Я согласен на обработку персональных данных</span>
+                                </label>
+                            </div>
+                            <div class="mt-12">
+    <form id="messageForm">
+        <!-- Ваши поля формы здесь -->
+        <button type="button" onclick="sendMessage()" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Отправить сообщение</button>
+    </form>
+</div>
+
+<script>
+function sendMessage() {
+    // Здесь можно добавить логику валидации формы перед отправкой
+    window.location.href = "mailto:devicefix@icloud.com";
+    
+    // Или альтернативный вариант - открыть почтовый клиент в новом окне
+    // window.open("mailto:devicefix@icloud.com", "_blank");
+}
+</script>
+                       
+                <div class="bg-white rounded-lg shadow-md overflow-hidden h-96">
+                    <iframe src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" class="w-full h-full"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="#" class="inline-block mb-6">
+                        <span class="text-white text-3xl font-['Pacifico']">DeviceFix</span>
+                    </a>
+                    <p class="text-gray-400 mb-6">Профессиональный ремонт цифровой техники с гарантией качества</p>
+                    <div class="flex space-x-4">
+                        <a href="https://t.me/+79649518224" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                               <i class="ri-telegram-fill"></i>
+                               </a>
+                                <a href="#" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-vk-fill"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                                <a href="https://web.whatsapp.com/+79649518224" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-whatsapp-line"></i>
+                                </a>
+                                <a href="mailto:devicefix@icloud.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="ri-mail-line"></i>
+                                </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Услуги</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ремонт смартфонов</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ремонт ноутбуков</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ремонт планшетов</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ремонт компьютеров</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Восстановление данных</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Корпоративное обслуживание</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Информация</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">О компании</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Цены на услуги</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Гарантия</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Блог</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Вакансии</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Контакты</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                                <i class="ri-map-pin-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-400">г. Оренбург, ул. Геннадия Донковцева , д. 15</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                                <i class="ri-time-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-400">Пн-Пт: 10:00 - 20:00<br>Сб-Вс: 10:00 - 18:00</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                                <i class="ri-phone-line text-primary"></i>
+                            </div>
+                            <a href="tel:+79123497383" class="text-gray-400 hover:text-white transition">+7 (912) 497-73-83</a>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                                <i class="ri-mail-line text-primary"></i>
+                            </div>
+                            <a href="mailto:devicefix@icloud.com" class="text-gray-400 hover:text-white transition">devicefix@icloud.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">© 2025 DeviceFix. Все права защищены.</p>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white transition">Политика конфиденциальности</a>
+                    <a href="#" class="text-gray-500 hover:text-white transition">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Checkbox custom styling
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const indicator = this.nextElementSibling.querySelector('div');
+                    if (this.checked) {
+                        indicator.classList.remove('hidden');
+                    } else {
+                        indicator.classList.add('hidden');
+                    }
+                });
+            });
+            
+            // FAQ accordions
+            const faqButtons = document.querySelectorAll('.faq-item button');
+            faqButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.classList.remove('ri-arrow-up-s-line');
+                        icon.classList.add('ri-arrow-down-s-line');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.classList.remove('ri-arrow-down-s-line');
+                        icon.classList.add('ri-arrow-up-s-line');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
